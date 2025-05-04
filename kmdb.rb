@@ -123,31 +123,50 @@ movie.save
 actor = Actor.new
 actor["name"] = "Christian Bale"
 actor.save
+
+actor = Actor.new
 actor["name"] = "Michael Caine"
 actor.save
+
+actor = Actor.new
 actor["name"] = "Liam Neeson"
 actor.save
+
+actor = Actor.new
 actor["name"] = "Katie Holmes"
 actor.save
-actor["name"] = "Gary Oldman
+
+actor = Actor.new
+actor["name"] = "Gary Oldman"
 actor.save
+
+actor = Actor.new
 actor["name"] = "Heath Ledger"
 actor.save
+
+actor = Actor.new
 actor["name"] = "Aaron Eckhart"
 actor.save
+
+actor = Actor.new
 actor["name"] = "Maggie Gyllenhaal"
 actor.save
+
+actor = Actor.new
 actor["name"] = "Tom Hardy"
 actor.save
+
+actor = Actor.new
 actor["name"] = "Joseph Gordon-Levitt"
 actor.save
+
+actor = Actor.new
 actor["name"] = "Anne Hathaway"
 actor.save
 
-
-bb = Movie.find_by({ "name" => "Batman Begins" })
-dk = Movie.find_by({ "name" => "Batman Begins" })
-dkr = Movie.find_by({ "name" => "Batman Begins" })
+bb = Movie.find_by({ "title" => "Batman Begins" })
+dk = Movie.find_by({ "title" => "The Dark Knight" })
+dkr = Movie.find_by({ "title" => "The Dark Knight Rises" })
 
 christianbale = Actor.find_by({ "name" => "Christian Bale" })
 michaelcaine = Actor.find_by({ "name" => "Michael Caine" })
@@ -251,6 +270,9 @@ role["movie_id"] = dkr["id"]
 role["actor_id"] = annehathaway["id"]
 role["character_name"] = "Selina Kyle"
 role.save
+
+puts "There are #{Movie.all.count} movies"
+puts "There are #{Actor.all.count} actors"
 
 
 # Prints a header for the movies output
